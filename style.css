@@ -1,0 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+*::selection {
+  color: white;
+  background-color: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #F7F7F7;
+}
+
+#nav{
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  
+}
+
+#nav #nav2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#nav-part1{
+  height:82px;
+  overflow: hidden;
+
+}
+
+#nav-part1 svg{
+  display: block;
+}
+
+#nav2 #links a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 20px;
+}
+
+#nav2 icons i{
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: 100;
+}
+
+#links{
+  padding: 10px;
+}
+
+#icons{
+  padding: 10px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+#cursor{
+    height: 180px;
+    width: 180px;
+    background-color: blanchedalmond ;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+    
+}
+
+#page1 {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  padding: 0 1vw;
+  padding-top: 18vh;
+}
+
+#page1 h1 {
+  font-size: 15.8vw;
+  font-family: "futura";
+  line-height: 14vw;
+  letter-spacing: -8px;
+  font-weight: 700;
+}
+
+#video-container {
+  height: 100vh;
+  width: 100%;
+  margin-top: 1vw;
+  position: relative;
+}
+
+#video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#video-container #play {
+  padding: 3vw 2.2vw;
+  background-color: black;
+  color: #fff;
+  position: fixed;
+  font-size: 1.2vw;
+  font-family: futura;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  /* align-items: center; */
+  padding: 3vw 1vw;
+  justify-content: space-between;
+}
+
+#page2 .elem {
+  height: 100%;
+  width: 32.5%;
+  /* background-color: rgb(235, 5, 44); */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page2 .elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+/* #page2 .elem .details{
+  height: 55px;
+  border-radius: 50px;
+  width: 50%;
+  position: absolute;
+  background-color: #f5dfcf;
+  z-index: 9;
+}
+
+#page2 .elemcol .details{
+  background-color: #edf3ff;
+}
+#page2 .elemcol1 .details{
+  background-color: #fff;
+} */
+
+.elem > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+.elem > .details {
+  height: 50px;
+  width: 90%;
+  border-radius: 40px;
+  position: absolute;
+  background: #c1aaa3;
+  z-index: 9;
+  transition: ease-in-out all 0.5s;
+  padding: 20px;
+  font-family: "Helvetica Now Text", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+}
+.details-2-color {
+  background: #f2dccb !important;
+}
+.details-3-color {
+  background: #ffffff !important;
+}
+
+.elem > .details > .inner-dets {
+  display: none !important;
+  /* transition: all ease-in-out all 1s; */
+}
+
+.inner-details {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+}
+
+.dets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-details > div > figure > img {
+  height: auto;
+  width: 100px;
+  object-fit: cover;
+}
+
+.elem > .details:hover {
+  height: 200px;
+  align-items: start;
+  transition: ease-in-out all 0.3s;
+}
+
+.elem > .details:hover > .inner-dets {
+  display: block !important;
+}
+
+
+#page3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 1vw;
+}
+
+.page3-text1 {
+  width: 52%;
+  font-family: "Futura";
+  font-weight: 800;
+  font-size: 4.5vw;
+  line-height: 4vw;
+  letter-spacing: -4px;
+}
+
+.page3-text2 {
+  width: 30%;
+  font-family: "helvetica";
+  font-weight: 400;
+  font-size: 1.2vw;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.line {
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: ease-in-out all 0.3s;
+  font-size: 1.2vw;
+  font-family: "Futura";
+}
+
+.line:hover {
+  border-bottom: 2px solid #000;
+}
+
+#page4{
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.border{
+  font-size: 0.9rem;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  border-bottom: 2px solid #000;
+  margin: 1rem 0.5rem;
+}
+
+.page5-text{
+  font-size: 5rem;
+  text-align: center;
+  width: 80%;
+  margin: 2rem auto;
+  font-family: "futura";
+  font-weight: 800;
+  line-height: 5rem;
+  letter-spacing: -2px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+.page5-text2{
+  font-size: 1.5rem !important;
+  letter-spacing: 0px;
+  width: 50%;
+  line-height: 2rem;
+
+}
+
+.page5-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.8rem;
+  font-family: "Futura";
+  line-height: 2rem;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #f7f7f7;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  transition: ease-in-out all 0.3s;
+}
+
+.page5-Button:hover {
+  background-color: #f7f7f7;
+  color: #000;
+}
+/* page6 */
+
+#page6 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  gap: 2rem;
+  border-bottom: 2px solid #000;
+}
+
+.page6-Heading {
+  font-family: "Futura";
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  letter-spacing: -1px;
+}
+
+.page6-text {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  word-wrap: break-word;
+}
+.page6-img-1 {
+  width: 33%;
+  width: 30rem;
+  overflow: hidden;
+}
+.page6-img-1 > img {
+  width: 27rem;
+  object-fit: cover;
+  scale: 1.1;
+}
+.page6-img-2 > img {
+  width: 27rem;
+  object-fit: cover;
+  scale: 1.1;
+}
+.page6-img-2 {
+  width: 33%;
+  overflow: hidden;
+}
+
+/* page7 */
+#page7 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+  gap: 2rem;
+  border-bottom: 2px solid #000;
+}
+
+#page7 > div > p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  color: #3f3f3f;
+}
+
+#page7 > div > ul {
+  list-style: none;
+  display: flex;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  font-family: "Futura";
+  flex-direction: column;
+}
+
+#page7 > div > img {
+  width: 20rem;
+}
+
+.child{
+  height: 54vh;
+  width: 48vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.child img{
+    height: auto;
+    width: 90%;
+    z-index: 2;
+}
+
+@media (max-width: 600px) {
+  #page1 {
+    min-height: 70vh;
+    width: 100%;
+    padding: 0 3vw;
+    padding-top: 25vh;
+  }
+
+  #page1 h1 {
+    font-size: 15.5vw;
+    letter-spacing: -3.8px;
+  }
+  #video-container {
+    height: 25vh;
+    margin-top: 3vw;
+  }
+  #video-container #play {
+    padding: 10vw 7.2vw;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    font-size: 4.5vw;
+    opacity: 1;
+    scale: 1;
+    transform: translate(-50%, -50%);
+  }
+  #page2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5vw 3vw;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+  }
+
+  #page2 .elem {
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(235, 5, 44); */
+    overflow: hidden;
+    margin-bottom:3vw ;
+  } 
+}
